@@ -10,21 +10,19 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.selamta.navigationwithcompose.ui.theme.NavigationWithComposeTheme
 
 class MainActivity : ComponentActivity() {
 
-    private lateinit var navController: NavHostController
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             NavigationWithComposeTheme {
-                navController = rememberNavController()
-                SetUpNavGraph(navController = navController)
+                App()
             }
         }
     }
