@@ -1,7 +1,9 @@
 package com.selamta.navigationwithcompose
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
@@ -22,12 +24,13 @@ fun App() {
 
 @Composable
 fun HomeScreen(navController: NavController) {
-    Box(
+    Column(
         modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Home",
+            text = "This is Home Screen",
             color = MaterialTheme.colorScheme.primary,
 //            fontSize = MaterialTheme.typography.h3.fontSize,
             fontSize = MaterialTheme.typography.headlineMedium.fontSize,
@@ -36,7 +39,7 @@ fun HomeScreen(navController: NavController) {
         Button(onClick = {
             navController.navigate("detail")
         }) {
-            Text(text = "Click here and go to details")
+            Text(text = "Go to Detail Screen")
 
         }
     }

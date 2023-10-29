@@ -1,7 +1,9 @@
 package com.selamta.navigationwithcompose
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
@@ -16,20 +18,22 @@ import androidx.navigation.NavHostController
 
 @Composable
 fun DetailScreen(navController: NavController) {
-    Box(
+    Column(
         modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+
     ) {
         Text(
-            text = "Detail",
-            color = Color.Red,
+            text = "This is Detail Screen",
+            color = MaterialTheme.colorScheme.primary,
             fontSize = MaterialTheme.typography.headlineMedium.fontSize,
             fontWeight = FontWeight.Bold
         )
         Button(onClick = {
             navController.popBackStack()
         }) {
-            Text(text = "Click - go to back home")
+            Text(text = "Go Back")
 
         }
     }
