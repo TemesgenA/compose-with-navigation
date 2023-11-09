@@ -32,5 +32,12 @@ fun DetailScreen(navController: NavController) {
             Text(text = "Go Back")
 
         }
+
+        Text(
+            text = "This is simple implementation intended to show navigation in compose",
+            color = MaterialTheme.colorScheme.tertiary,
+            fontSize = MaterialTheme.typography.bodyMedium.fontSize,
+            fontWeight = FontWeight.Bold
+        )
     }
 }
